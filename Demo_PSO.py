@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 
 
 # load data
-data  = pd.read_csv('dataset/luwak_citra.csv')
+data  = pd.read_csv('dataset/lwk_ctr.csv')
 data  = data.values
 feat  = np.asarray(data[:, 0:-1])
 label = np.asarray(data[:, -1])
@@ -45,6 +45,7 @@ print("Accuracy:", 100 * Acc)
 # number of selected features
 num_feat = fmdl['nf']
 print("Feature Size:", num_feat)
+print("SF:", sf)
 
 # plot convergence
 curve   = fmdl['c']
