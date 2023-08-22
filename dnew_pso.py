@@ -24,6 +24,10 @@ opts = {'k': k, 'fold': fold, 'N': N, 'T': T}
 fmdl = jfs(feat, label, opts)
 sf = fmdl['sf']
 
+# Get selected feature names
+selected_feature_names = data.columns[sf]  # Assuming 'data' is your DataFrame
+# print("Selected Feature Names:", selected_feature_names)
+
 # Model with selected features
 x_train = xtrain[:, sf]
 x_valid = xtest[:, sf]
@@ -39,6 +43,7 @@ print("Accuracy:", 100 * accuracy)
 num_feat = fmdl['nf']
 print("Feature Size:", num_feat)
 print("Selected Features:", sf)
+print("Selected Feature Names:", selected_feature_names)
 
 # Plot convergence
 curve = fmdl['c']
