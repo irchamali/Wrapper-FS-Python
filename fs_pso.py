@@ -10,7 +10,7 @@ import numpy as np
 import pandas as pd
 
 # load data
-dataset  = pd.read_csv('ionosphere.csv')
+dataset  = pd.read_csv('dataset/ionosphere.csv')
 dataset  = dataset.values
 feat  = np.asarray(dataset[:, 0:-1])
 label = np.asarray(dataset[:, -1])
